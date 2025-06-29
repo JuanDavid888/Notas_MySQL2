@@ -61,6 +61,8 @@ Un procedimiento almacenado es un conjunto de instrucciones SQL que se guardan e
 ```sql
 DELIMITER $$
 
+DROP PROCEDURE IF EXISTS nombre_del_procedimiento;
+
 CREATE PROCEDURE nombre_del_procedimiento(param1 tipo, param2 tipo)
 BEGIN
     -- Instrucciones SQL aquí
@@ -73,6 +75,8 @@ DELIMITER ;
 
 ```sql
 DELIMITER $$
+
+DROP PROCEDURE IF EXISTS insertar_cliente;
 
 CREATE PROCEDURE insertar_cliente(
     IN p_nombre VARCHAR(100),
@@ -90,5 +94,5 @@ DELIMITER ;
 ### *_Estrucura para llamar un Procedimiento Almacenado_*
 
 ```sql
-CALL insertar_cliente('Ana López', '30102030408', 'Av. Central 123');
+CALL insertar_cliente(parámetros);
 ```
