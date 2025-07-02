@@ -354,6 +354,12 @@ FIRT | AFTER // sirve para seleccionar donde colocar esa columna
 ALTER TABLE tabla DROP COLUMN columna;
 ```
 
+**23. BackUp:**
+
+```sql
+docker exec mysql_container mysqldump -u root -padmin mi_primera_db > backup_mi_primera_db.sql
+```
+
 ## **Autor**
 
 **Camper:** `Juan David Jaimes Miranda`
